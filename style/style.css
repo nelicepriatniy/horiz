@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body,
+html {
+  font-size: 0.0520833333vw;
+}
+
+.h-scroll {
+  height: 800vh;
+  /* регулируешь длину "участка" */
+  position: relative;
+}
+
+.h-scroll__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.h-scroll__content {
+  display: flex;
+  height: 100%;
+  width: max-content;
+}
+
+.item {
+  height: 100%;
+  flex-shrink: 0;
+  font-size: 60rem;
+  position: relative;
+}
+
+.item .bg {
+  height: 100vh;
+}
+.item.center-text .item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.item.left-text .item-text {
+  position: absolute;
+  top: 50%;
+  left: 30rem;
+  transform: translateY(-50%);
+}
+
+.btm {
+  height: 50vh;
+  background: red;
+}
+
+.container {
+  width: 1840rem;
+  margin: auto;
+}
+
+header {
+  padding: 20rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9;
+  isolation: isolate;
+  background: transparent;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+header .logo {
+  height: 42rem;
+}
+header .text {
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  color: #0c0c0c;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 32rem;
+  letter-spacing: -0.08em;
+}
+header .text span {
+  font-family: "Cormorant", sans-serif;
+  font-size: 40rem;
+  letter-spacing: -0.04em;
+}
+header .header-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  width: 65rem;
+}
+header .header-menu span {
+  width: 100%;
+  height: 5rem;
+  background: black;
+}
+
+.item-1 {
+  background: #EDE3DA;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.item-1 .bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.item-1 .text {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 400;
+  font-size: 32rem;
+  letter-spacing: -0.08em;
+  color: #d9d9d9;
+  position: absolute;
+  bottom: 80rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.item-text {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 400;
+  font-size: 32rem;
+  letter-spacing: -0.08em;
+  color: #0c0c0c;
+}
+
+.item-2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+.item-2 .text {
+  position: absolute;
+  top: 50%;
+  left: 44rem;
+  transform: translateY(-50%);
+}
+.item-2 img {
+  height: 100vh;
+}
+
+.item-3 {
+  position: relative;
+}
+.item-3 .bg {
+  height: 100vh;
+}
+.item-3 .item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+.menu .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 77rem;
+  padding-top: 290rem;
+}
+.menu .menu-list {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  min-width: 40%;
+}
+.menu .menu-list:nth-child(even) {
+  align-items: flex-end;
+}
+.menu .menu-list a,
+.menu .menu-list p {
+  width: 290px;
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: -0.08em;
+  color: #ede3da;
+  transition: all 0.4s ease;
+}
+.menu .menu-list a:hover {
+  color: #b87951;
+}
+
+/*# sourceMappingURL=style.css.map */
