@@ -295,6 +295,11 @@ header {
 .hero {
   position: relative;
   min-height: 90vh;
+  padding-bottom: 100rem;
+
+  @media (max-width: 1024px) {
+    min-height: 30vh;
+  }
 
   .bg {
     position: absolute;

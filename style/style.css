@@ -246,6 +246,12 @@ header .header-menu span {
 .hero {
   position: relative;
   min-height: 90vh;
+  padding-bottom: 100rem;
+}
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 30vh;
+  }
 }
 .hero .bg {
   position: absolute;
