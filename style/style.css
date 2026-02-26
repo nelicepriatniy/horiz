@@ -14,6 +14,10 @@ body,
 html {
   font-size: 0.0520833333vw;
 }
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+}
 
 .h-scroll {
   height: 800vh;
@@ -32,35 +36,6 @@ html {
   display: flex;
   height: 100%;
   width: max-content;
-}
-
-.item {
-  height: 100%;
-  flex-shrink: 0;
-  font-size: 60rem;
-  position: relative;
-}
-
-.item .bg {
-  height: 100vh;
-}
-.item.center-text .item-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.item.left-text .item-text {
-  position: absolute;
-  top: 50%;
-  left: 30rem;
-  transform: translateY(-50%);
-}
-.item .dop-img {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
 }
 
 .btm {
@@ -90,7 +65,7 @@ header .container {
   background: transparent;
 }
 header .logo {
-  height: 42rem;
+  height: 22rem;
 }
 header .text {
   font-style: italic;
@@ -116,7 +91,7 @@ header .header-menu {
 header .header-menu span {
   width: 100%;
   height: 5rem;
-  background: black;
+  background: #737373;
 }
 
 .item-1 {
@@ -182,73 +157,12 @@ header .header-menu span {
   z-index: 2;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-  z-index: 11;
-}
-.menu.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 12;
-}
-.menu.footer {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-}
-.menu .bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.menu .container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 77rem;
-  padding-top: 290rem;
-}
-.menu .menu-list {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 15rem;
-  min-width: 40%;
-}
-.menu .menu-list:nth-child(even) {
-  align-items: flex-end;
-}
-.menu .menu-list a,
-.menu .menu-list p {
-  width: 290rem;
-  font-family: "JetBrains Mono", sans-serif;
-  font-weight: 400;
-  font-size: 16rem;
-  line-height: 155%;
-  letter-spacing: -0.08em;
-  color: #ede3da;
-  transition: all 0.4s ease;
-}
-.menu .menu-list a:hover {
-  color: #b87951;
-}
-
 .hero {
   position: relative;
   min-height: 90vh;
   padding-bottom: 100rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024rem) {
   .hero {
     min-height: 30vh;
   }
@@ -313,6 +227,18 @@ header .header-menu span {
 }
 .text-block:nth-child(odd) .container {
   flex-flow: row-reverse;
+}
+@media (max-width: 1024rem) {
+  .text-block .container {
+    flex-direction: column;
+    flex-flow: column !important;
+  }
+  .text-block .container .ltext-l,
+  .text-block .container .text-r {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+  }
 }
 .text-block .container {
   display: flex;
@@ -453,6 +379,444 @@ header .header-menu span {
   object-fit: cover;
   position: absolute;
   z-index: 1;
+}
+
+.block {
+  background: #131313;
+  min-width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.block .icon {
+  position: absolute;
+  top: 40rem;
+  left: 0;
+}
+.block.white {
+  background: white;
+}
+.block.white .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block.white .container {
+  width: calc(100vw - 120rem);
+}
+.block.white .heading {
+  color: #131313;
+  width: 100%;
+  text-align: center;
+}
+.block.white .list {
+  width: 400rem;
+}
+.block.white .list .list-item * {
+  color: #131313;
+}
+.block.white .list .list-item:hover * {
+  color: #0429FF;
+}
+.block.white .regular-btn {
+  color: #131313;
+  width: 400rem;
+}
+.block.white .regular-btn:hover {
+  color: #0429FF;
+}
+.block.white .background {
+  display: none;
+}
+.block .img-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  align-items: center;
+  gap: 46rem;
+  max-width: 100%;
+  margin-top: 130rem;
+}
+.block .img-wrapper * {
+  width: 100%;
+}
+.block .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 250rem;
+  position: relative;
+  z-index: 2;
+  margin: 0 60rem;
+  width: fit-content;
+}
+.block .info {
+  width: fit-content;
+}
+.block .heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 48rem;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: white;
+  width: fit-content;
+}
+.block .list {
+  margin-top: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  width: fit-content;
+}
+.block .list .list-item {
+  width: fit-content;
+}
+.block .list .list-item * {
+  font-family: "JetBrains Mono", sans-serif;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 140%;
+  color: white;
+  display: flex;
+  gap: 5rem;
+  transition: all 0.2s ease;
+}
+.block .list .list-item span {
+  opacity: 0;
+  transform: translateX(-15rem);
+  transition: all 0.2s ease;
+}
+.block .list .list-item:hover span {
+  transform: translateX(0);
+  opacity: 1;
+}
+.block .list .list-item:hover * {
+  color: #d6e129;
+}
+.block .telegram-btn {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #131313;
+  padding: 15rem 25rem;
+  border-radius: 5rem;
+  background-color: white;
+  width: fit-content;
+  margin-top: 60rem;
+}
+.block .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.block .background video,
+.block .background img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+.block .regular-btn {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 140%;
+  color: white;
+  display: flex;
+  gap: 10rem;
+  margin-top: 25rem;
+  transition: all 0.2s ease;
+}
+.block .regular-btn span {
+  opacity: 0;
+  transform: translateX(-15rem);
+  transition: all 0.2s ease;
+}
+.block .regular-btn:hover span {
+  transform: translateX(0);
+  opacity: 1;
+}
+.block .regular-btn:hover {
+  color: #d6e129;
+}
+.block .description {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 20rem;
+  color: white;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 130%;
+  margin-top: 50rem;
+  max-width: 775rem;
+}
+.block .description span {
+  font-weight: 500;
+  line-height: 140%;
+}
+
+footer .logo {
+  display: none;
+}
+footer {
+  background: #131313;
+  padding-top: 40rem;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+footer a {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 140%;
+  color: white;
+  transition: all 0.4s ease;
+}
+footer a:hover {
+  color: #d6e129;
+}
+footer a.tg {
+  font-weight: 400;
+  font-size: 32rem;
+  line-height: 130%;
+  margin-top: 200rem;
+}
+footer .footer-l {
+  display: flex;
+  gap: 160rem;
+}
+footer .footer-r .item {
+  display: flex;
+  flex-direction: column;
+  gap: 165rem;
+}
+footer .container:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+footer .bg {
+  width: 100%;
+  margin-top: 60rem;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: #131313;
+  z-index: 11;
+  padding: 140rem 130rem 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease;
+}
+.menu.active {
+  transform: translateX(0);
+}
+.menu .menu-close {
+  position: absolute;
+  top: 20rem;
+  right: 30rem;
+  justify-content: flex-end;
+}
+.menu .menu-close svg {
+  width: 75rem;
+  height: 75rem;
+}
+.menu .logo {
+  height: 20rem;
+  position: relative;
+}
+.menu .logo img {
+  height: 100%;
+}
+.menu .item {
+  margin-top: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40rem;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+.menu li a {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 140%;
+  color: white;
+}
+.menu .telegram-btn {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #131313;
+  border-radius: 5rem;
+  padding: 15rem 25rem;
+  background: #d6e129;
+  width: fit-content;
+  margin-top: 40rem;
+}
+
+@media (max-width: 1024px) {
+  .desk {
+    display: none;
+  }
+  body,
+  html {
+    font-size: 0.2666666667vw;
+  }
+  .container {
+    width: calc(100vw - 50rem);
+    margin: 0 25rem;
+  }
+  header .logo {
+    height: 14rem;
+  }
+  header .header-menu {
+    width: 43rem;
+    gap: 7rem;
+  }
+  header .header-menu span {
+    height: 3rem;
+  }
+  .h-scroll__sticky {
+    position: relative;
+    height: auto;
+  }
+  .h-scroll__content {
+    display: block;
+  }
+  .h-scroll {
+    height: auto;
+  }
+  .block:first-child {
+    padding-top: 100rem;
+  }
+  .block:first-child .icon {
+    display: block;
+    top: -80rem;
+  }
+  .block .icon {
+    display: none;
+  }
+  .block .regular-btn {
+    font-size: 20rem;
+  }
+  .block {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .block.white .container {
+    width: calc(100vw - 50rem);
+    margin: 0 25rem;
+  }
+  .block.white .list,
+  .block.white .regular-btn {
+    width: 100%;
+  }
+  .block.white .background {
+    display: block;
+  }
+  .block .container {
+    width: calc(100vw - 50rem);
+    margin: 0 25rem;
+    padding-top: 20rem;
+    padding-bottom: 30rem;
+  }
+  .block .heading {
+    font-weight: 400;
+    font-size: 28rem;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #f7f7f7;
+  }
+  .block .list {
+    gap: 10rem;
+  }
+  .block .list .list-item * {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+  }
+  .block .background {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    padding: 25rem;
+  }
+  .block .background video,
+  .block .background img {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+  .block .img-wrapper {
+    display: none;
+  }
+  .block .description {
+    font-size: 16rem;
+  }
+  footer {
+    padding-bottom: 20rem;
+  }
+  footer .footer-l {
+    flex-direction: column;
+    gap: 40rem;
+    margin-bottom: 40rem;
+  }
+  footer .container:first-child {
+    gap: 40rem;
+    flex-direction: column;
+  }
+  footer a {
+    font-size: 16px;
+  }
+  footer a.tg {
+    margin-top: 40rem;
+    display: block;
+    font-size: 16px;
+  }
+  footer .logo {
+    width: 100%;
+    margin-bottom: 40rem;
+  }
+  footer .footer-r .item {
+    gap: 40rem;
+  }
+  footer .bg {
+    display: none;
+  }
+  .menu {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 50rem 30rem 30rem;
+  }
+  .menu ul {
+    gap: 24rem;
+  }
+  .menu .logo {
+    height: 14rem;
+  }
+  .menu .menu-close svg {
+    width: 45rem;
+    height: 45px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
