@@ -2,41 +2,44 @@ if (window.innerWidth > 1024) {
   const section = document.querySelector('.h-scroll');
   const content = document.querySelector('.h-scroll__content');
 
-  let currentX = 0;
-  let targetX = 0;
-  let isActive = false;
+  if (section) {
+    let currentX = 0;
+    let targetX = 0;
+    let isActive = false;
 
-  function lerp(start, end, ease) {
-    return start + (end - start) * ease;
-  }
-
-  function animate() {
-    if (isActive) {
-      currentX = lerp(currentX, targetX, 0.08); // 0.08 = сила инерции (меньше = более "тяжелая")
-      content.style.transform = `translateX(${-currentX}px)`;
+    function lerp(start, end, ease) {
+      return start + (end - start) * ease;
     }
 
-    requestAnimationFrame(animate);
+    function animate() {
+      if (isActive) {
+        currentX = lerp(currentX, targetX, 0.08); // 0.08 = сила инерции (меньше = более "тяжелая")
+        content.style.transform = `translateX(${-currentX}px)`;
+      }
+
+      requestAnimationFrame(animate);
+
+    }
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const start = section.offsetTop;
+      const end = start + section.offsetHeight - window.innerHeight;
+
+      if (scrollTop >= start && scrollTop <= end) {
+        isActive = true;
+
+        const progress = (scrollTop - start) / (end - start);
+        const maxScroll = content.scrollWidth - window.innerWidth;
+
+        targetX = progress * maxScroll;
+      } else {
+        isActive = false;
+      }
+    });
+
+    animate();
   }
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const start = section.offsetTop;
-    const end = start + section.offsetHeight - window.innerHeight;
-
-    if (scrollTop >= start && scrollTop <= end) {
-      isActive = true;
-
-      const progress = (scrollTop - start) / (end - start);
-      const maxScroll = content.scrollWidth - window.innerWidth;
-
-      targetX = progress * maxScroll;
-    } else {
-      isActive = false;
-    }
-  });
-
-  animate();
 
 }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap');
 
 $font-family: "JetBrains Mono", sans-serif;
 $second-family: "Cormorant", sans-serif;
@@ -187,7 +187,7 @@ header {
   min-height: 90vh;
   padding-bottom: 100rem;
 
-  @media (max-width: 1024rem) {
+  @media (max-width: 1024px) {
     min-height: 30vh;
   }
 
@@ -251,21 +251,27 @@ header {
 }
 
 .text-block {
-  background: #ede3da;
+  background: white;
 
-  &:nth-child(2) {
-    padding-top: 40rem;
-  }
 
-  &:nth-child(odd) {
+  &:nth-child(2) {}
+
+  &.reverce {
     .container {
       flex-flow: row-reverse;
 
     }
+
+    .text-l {
+      padding-right: 0px;
+      padding-left: 20px;
+    }
+
   }
 
-  @media (max-width: 1024rem) {
+  @media (max-width: 1024px) {
     .container {
+      display: flex;
       flex-direction: column;
       flex-flow: column !important;
 
@@ -282,22 +288,23 @@ header {
 
   .container {
     display: flex;
-    gap: 20rem;
   }
 
   .text-l {
     padding-top: 30rem;
     padding-bottom: 30rem;
     flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
 
     .heading {
-      font-family: $second-family;
-      font-style: italic;
+      font-family: 'Unbounded';
       font-weight: 400;
-      font-size: 96rem;
-      letter-spacing: -0.08em;
-      color: #0c0c0c;
-      margin-bottom: 20rem;
+      font-size: 48px;
+      line-height: 135%;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: #131313;
     }
 
     .item {
@@ -345,23 +352,24 @@ header {
 
   .text-r {
     flex: 1;
+    max-width: 50%;
+
     object-fit: cover;
-    max-width: 910rem;
   }
 }
 
 .more-deal {
-  background: #ede3da;
   padding-top: 40rem;
   padding-bottom: 130rem;
 
   .heading {
-    font-family: $second-family;
-    font-style: italic;
+    font-family: 'Unbounded';
     font-weight: 400;
-    font-size: 96rem;
-    letter-spacing: -0.08em;
-    color: #0c0c0c;
+    font-size: 48px;
+    line-height: 135%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #131313;
     margin-bottom: 70rem;
   }
 
@@ -380,6 +388,7 @@ header {
 
     .more-item_l {
       display: flex;
+      align-items: center;
     }
 
     .cube {
@@ -392,12 +401,22 @@ header {
     .name,
     .text,
     .link {
+      font-family: 'JetBrains Mono';
       font-family: $second-family;
-      font-style: italic;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: #131313;
+    }
+
+    .text,
+    .linl {
+
       font-weight: 400;
-      font-size: 40rem;
-      letter-spacing: -0.04em;
-      color: #0c0c0c;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      color: #131313;
     }
 
   }
@@ -406,7 +425,6 @@ header {
 .keyses {
   position: relative;
   padding-bottom: 50rem;
-  background: #ede3da;
 
   &.deal {
     .text {
@@ -416,22 +434,28 @@ header {
 
   .container {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 180rem 320rem;
     z-index: 2;
   }
 
   .text {
-    font-family: $second-family;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 96rem;
-    letter-spacing: -0.08em;
-    color: #0c0c0c;
+    font-family: 'Unbounded';
     position: relative;
     z-index: 2;
     text-align: right;
     width: 100%;
     display: block;
+    width: fit-content;
+    color: white;
+    padding: 0 10rem;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 135%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
   }
 
   .bg {
@@ -711,6 +735,11 @@ footer {
 
   }
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .footer-l {
     display: flex;
     gap: 160rem;
@@ -814,6 +843,80 @@ footer {
   }
 }
 
+.img-block {
+  margin-bottom: 20rem;
+  margin-top: 20rem;
+
+  .mob {
+    display: none;
+  }
+
+  .desk {
+    display: block;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.keyses-page {
+  .hero {
+    min-height: auto;
+
+    .container {
+      padding-top: 130rem;
+
+      .heading {
+        font-family: 'Unbounded';
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 135%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: #131313;
+      }
+    }
+  }
+}
+
+.blog-heading {
+  padding-top: 130rem;
+
+  .heading {
+    font-family: 'Unbounded';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 135%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #131313;
+    margin-bottom: 60rem;
+  }
+
+  .categories-wrapper {
+    display: flex;
+    gap: 16rem 25rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .item {
+      border-radius: 10px;
+      padding: 10px;
+      background: #f7f7f7;
+      font-family: 'JetBrains Mono';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: #1a1f26;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
 
   .desk {
@@ -860,6 +963,23 @@ footer {
   }
 
   .block {
+    &:nth-child(odd) {
+      background: #131313 !important;
+
+      * {
+        color: #f7f7f7 !important;
+      }
+    }
+
+    &:nth-child(even) {
+      background: #f7f7f7 !important;
+
+      * {
+        color: #131313 !important;
+      }
+
+    }
+
     &:first-child {
       padding-top: 100rem;
 
@@ -867,6 +987,8 @@ footer {
         display: block;
         top: -80rem;
       }
+
+
     }
 
     .icon {
@@ -960,6 +1082,8 @@ footer {
   footer {
     padding-bottom: 20rem;
 
+
+
     .footer-l {
       flex-direction: column;
       gap: 40rem;
@@ -1018,5 +1142,128 @@ footer {
       }
 
     }
+  }
+
+  .text-block {
+    .text-l {
+      max-width: 100%;
+
+      .heading {
+
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      .item {
+        .item_heading {
+
+          font-size: 20px;
+          line-height: 140%;
+
+          &::before {
+            width: 18rem;
+            height: 18rem;
+          }
+        }
+      }
+    }
+  }
+
+  .more-deal {
+    background-color: #131313;
+
+    .heading {
+
+      font-weight: 400;
+      font-size: 32rem;
+      line-height: 130%;
+      color: white;
+    }
+
+    .more-item {
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1rem solid white;
+
+      .name,
+      .text,
+      .link {
+        color: white;
+
+      }
+
+
+      .more-item_l {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16rem;
+        margin-bottom: 16rem;
+
+      }
+
+    }
+  }
+
+  .keyses {
+    padding: 0;
+
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 220rem 0;
+    }
+
+    .text {
+      font-size: 32rem;
+    }
+  }
+
+  .img-block {
+    .mob {
+      display: flex;
+      height: 450rem;
+      width: 100%;
+      overflow-x: scroll;
+      gap: 15rem;
+    }
+
+    .desk {
+      display: none;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  .keyses-page {
+    .hero {
+      padding-bottom: 40rem;
+      background: #131313;
+
+      .logo {
+        display: block;
+        margin-bottom: 40rem
+      }
+
+      .container {
+        padding-top: 50rem;
+
+        .heading {
+          color: white;
+
+          font-size: 32rem;
+          line-height: 130%;
+        }
+      }
+    }
+
+  }
+
+  footer .container {
+    flex-direction: column;
+    ;
   }
 }
