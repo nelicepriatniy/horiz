@@ -387,6 +387,9 @@ header .header-menu span {
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 .keyses .bg {
   width: 100%;
@@ -738,6 +741,9 @@ footer .bg {
   color: #131313;
   margin-bottom: 60rem;
 }
+.blog-heading .logo {
+  display: none;
+}
 .blog-heading .categories-wrapper {
   display: flex;
   gap: 16rem 25rem;
@@ -755,6 +761,22 @@ footer .bg {
   letter-spacing: -0.02em;
   text-align: center;
   color: #1a1f26;
+}
+
+.blog-text {
+  font-family: "Inter Tight";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  color: #131313;
+  margin-bottom: 150rem;
+}
+.blog-text .container {
+  padding: 0 300rem;
+}
+.blog-text .container * {
+  margin-bottom: 15rem;
+  max-width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -949,6 +971,7 @@ footer .bg {
     color: white;
   }
   .more-deal .more-item .more-item_l {
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 16rem;
@@ -998,6 +1021,50 @@ footer .bg {
   }
   footer .container {
     flex-direction: column;
+  }
+  .blog-heading {
+    background: #131313;
+  }
+  .blog-heading .logo {
+    display: block;
+    margin-bottom: 40rem;
+  }
+  .blog-heading .heading {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: white;
+  }
+  .blog-text {
+    font-family: "Inter Tight";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #131313;
+    margin-bottom: 150rem;
+  }
+  .blog-text .container {
+    padding: 0;
+  }
+  .blog-text .container * {
+    margin-bottom: 15rem;
+    max-width: 100%;
+  }
+  .more-deal .more-item .cube {
+    width: 100%;
+    height: auto;
+  }
+  .blog-text {
+    display: none;
+  }
+  .keyses {
+    padding-bottom: 20rem;
+    background: #131313;
+  }
+  .keyses .text {
+    text-align: center;
+    font-size: 24rem;
   }
 }
 

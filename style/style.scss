@@ -456,6 +456,9 @@ header {
     line-height: 135%;
     letter-spacing: -0.04em;
     text-transform: uppercase;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
 
   .bg {
@@ -896,6 +899,10 @@ footer {
     margin-bottom: 60rem;
   }
 
+  .logo {
+    display: none;
+  }
+
   .categories-wrapper {
     display: flex;
     gap: 16rem 25rem;
@@ -913,6 +920,24 @@ footer {
       letter-spacing: -0.02em;
       text-align: center;
       color: #1a1f26;
+    }
+  }
+}
+
+.blog-text {
+  font-family: 'Inter Tight';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  color: #131313;
+  margin-bottom: 150rem;
+
+  .container {
+    padding: 0 300rem;
+
+    * {
+      margin-bottom: 15rem;
+      max-width: 100%;
     }
   }
 }
@@ -1194,6 +1219,7 @@ footer {
 
 
       .more-item_l {
+        width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 16rem;
@@ -1265,5 +1291,61 @@ footer {
   footer .container {
     flex-direction: column;
     ;
+  }
+
+  .blog-heading {
+    background: #131313;
+
+    .logo {
+      display: block;
+      margin-bottom: 40rem;
+    }
+
+    .heading {
+
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .blog-text {
+    font-family: 'Inter Tight';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #131313;
+    margin-bottom: 150rem;
+
+    .container {
+      padding: 0;
+
+      * {
+        margin-bottom: 15rem;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .more-deal .more-item .cube {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .blog-text {
+    display: none;
+  }
+
+  .keyses {
+    padding-bottom: 20rem;
+    background: #131313;
+  }
+
+  .keyses .text {
+    text-align: center;
+    font-size: 24rem;
   }
 }
