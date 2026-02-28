@@ -1066,6 +1066,9 @@ footer .bg {
     text-align: center;
     font-size: 24rem;
   }
+  .block .telegram-btn {
+    color: #131313 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
