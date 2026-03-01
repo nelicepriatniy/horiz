@@ -513,7 +513,8 @@ header {
 
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           * {
             color: #0429FF;
           }
@@ -522,7 +523,7 @@ header {
     }
 
     .regular-btn {
-      color: #131313;
+      color: #0429FF;
       width: 400rem;
 
 
@@ -611,6 +612,13 @@ header {
         transition: all .2s ease;
       }
 
+      &.active {
+        * {
+
+          color: #d6e129;
+        }
+      }
+
       &:hover {
         span {
           transform: translateX(0);
@@ -666,6 +674,7 @@ header {
     gap: 10rem;
     margin-top: 25rem;
     transition: all .2s ease;
+    color: #D6E129;
 
 
     span {

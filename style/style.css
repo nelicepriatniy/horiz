@@ -435,11 +435,11 @@ header .header-menu span {
 .block.white .list .list-item * {
   color: #131313;
 }
-.block.white .list .list-item:hover * {
+.block.white .list .list-item:hover *, .block.white .list .list-item.active * {
   color: #0429FF;
 }
 .block.white .regular-btn {
-  color: #131313;
+  color: #0429FF;
   width: 400rem;
 }
 .block.white .regular-btn:hover {
@@ -509,6 +509,9 @@ header .header-menu span {
   transform: translateX(-15rem);
   transition: all 0.2s ease;
 }
+.block .list .list-item.active * {
+  color: #d6e129;
+}
 .block .list .list-item:hover span {
   transform: translateX(0);
   opacity: 1;
@@ -554,6 +557,7 @@ header .header-menu span {
   gap: 10rem;
   margin-top: 25rem;
   transition: all 0.2s ease;
+  color: #D6E129;
 }
 .block .regular-btn span {
   opacity: 0;
