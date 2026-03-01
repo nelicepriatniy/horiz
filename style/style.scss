@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap');
 
 $font-family: "JetBrains Mono", sans-serif;
-$second-family: "Cormorant", sans-serif;
-$third-family: "Inter", sans-serif;
+$second-family: "Inter Tight", sans-serif;
+$third-family: "Unbounded", sans-serif;
 
 * {
   margin: 0;
@@ -263,8 +263,8 @@ header {
     }
 
     .text-l {
-      padding-right: 0px;
-      padding-left: 20px;
+      padding-right: 0rem;
+      padding-left: 20rem;
     }
 
   }
@@ -295,12 +295,12 @@ header {
     padding-bottom: 30rem;
     flex: 1;
     max-width: 50%;
-    padding-right: 20px;
+    padding-right: 20rem;
 
     .heading {
       font-family: 'Unbounded';
       font-weight: 400;
-      font-size: 48px;
+      font-size: 48rem;
       line-height: 135%;
       letter-spacing: -0.04em;
       text-transform: uppercase;
@@ -365,7 +365,7 @@ header {
   .heading {
     font-family: 'Unbounded';
     font-weight: 400;
-    font-size: 48px;
+    font-size: 48rem;
     line-height: 135%;
     letter-spacing: -0.04em;
     text-transform: uppercase;
@@ -404,7 +404,7 @@ header {
       font-family: 'JetBrains Mono';
       font-family: $second-family;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 20rem;
       line-height: 130%;
       color: #131313;
     }
@@ -413,7 +413,7 @@ header {
     .linl {
 
       font-weight: 400;
-      font-size: 16px;
+      font-size: 16rem;
       line-height: 150%;
       letter-spacing: -0.02em;
       color: #131313;
@@ -452,7 +452,7 @@ header {
     color: white;
     padding: 0 10rem;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 48rem;
     line-height: 135%;
     letter-spacing: -0.04em;
     text-transform: uppercase;
@@ -734,6 +734,7 @@ footer {
       font-size: 32rem;
       line-height: 130%;
       margin-top: 200rem;
+      color: #d6e129;
     }
 
   }
@@ -746,6 +747,18 @@ footer {
   .footer-l {
     display: flex;
     gap: 160rem;
+
+    .item {
+      &:first-child {
+        li {
+          &:last-child {
+            a {
+              color: #9eff00;
+            }
+          }
+        }
+      }
+    }
   }
 
   .footer-r {
@@ -875,7 +888,7 @@ footer {
       .heading {
         font-family: 'Unbounded';
         font-weight: 400;
-        font-size: 48px;
+        font-size: 48rem;
         line-height: 135%;
         letter-spacing: -0.04em;
         text-transform: uppercase;
@@ -891,7 +904,7 @@ footer {
   .heading {
     font-family: 'Unbounded';
     font-weight: 400;
-    font-size: 48px;
+    font-size: 48rem;
     line-height: 135%;
     letter-spacing: -0.04em;
     text-transform: uppercase;
@@ -910,12 +923,12 @@ footer {
     width: 100%;
 
     .item {
-      border-radius: 10px;
-      padding: 10px;
+      border-radius: 10rem;
+      padding: 10rem;
       background: #f7f7f7;
       font-family: 'JetBrains Mono';
       font-weight: 400;
-      font-size: 16px;
+      font-size: 16rem;
       line-height: 150%;
       letter-spacing: -0.02em;
       text-align: center;
@@ -927,7 +940,7 @@ footer {
 .blog-text {
   font-family: 'Inter Tight';
   font-weight: 400;
-  font-size: 22px;
+  font-size: 22rem;
   line-height: 130%;
   color: #131313;
   margin-bottom: 150rem;
@@ -942,7 +955,14 @@ footer {
   }
 }
 
+.keyses-page .hero {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .keyses-page .hero {
+    display: block;
+  }
 
   .desk {
     display: none;
@@ -1069,7 +1089,7 @@ footer {
 
         * {
 
-          font-size: 16px;
+          font-size: 16rem;
           line-height: 150%;
 
           letter-spacing: -0.02em;
@@ -1122,12 +1142,12 @@ footer {
 
     a {
 
-      font-size: 16px;
+      font-size: 16rem;
 
       &.tg {
         margin-top: 40rem;
         display: block;
-        font-size: 16px;
+        font-size: 16rem;
       }
     }
 
@@ -1162,7 +1182,7 @@ footer {
     .menu-close {
       svg {
         width: 45rem;
-        height: 45px;
+        height: 45rem;
 
       }
 
@@ -1175,14 +1195,14 @@ footer {
 
       .heading {
 
-        font-size: 22px;
+        font-size: 22rem;
         line-height: 130%;
       }
 
       .item {
         .item_heading {
 
-          font-size: 20px;
+          font-size: 20rem;
           line-height: 140%;
 
           &::before {
@@ -1304,7 +1324,7 @@ footer {
     .heading {
 
       font-weight: 400;
-      font-size: 32px;
+      font-size: 32rem;
       line-height: 130%;
       text-transform: uppercase;
       color: white;
@@ -1314,7 +1334,7 @@ footer {
   .blog-text {
     font-family: 'Inter Tight';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 130%;
     color: #131313;
     margin-bottom: 150rem;

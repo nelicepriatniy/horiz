@@ -77,7 +77,7 @@ header .text {
   letter-spacing: -0.08em;
 }
 header .text span {
-  font-family: "Cormorant", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-size: 40rem;
   letter-spacing: -0.04em;
 }
@@ -188,7 +188,7 @@ header .header-menu span {
   padding-top: 420rem;
 }
 .hero .heading {
-  font-family: "Cormorant", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 96rem;
@@ -210,7 +210,7 @@ header .header-menu span {
   color: #ede3da;
 }
 .hero .description {
-  font-family: "Cormorant", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 40rem;
@@ -226,8 +226,8 @@ header .header-menu span {
   flex-flow: row-reverse;
 }
 .text-block.reverce .text-l {
-  padding-right: 0px;
-  padding-left: 20px;
+  padding-right: 0rem;
+  padding-left: 20rem;
 }
 @media (max-width: 1024px) {
   .text-block .container {
@@ -250,12 +250,12 @@ header .header-menu span {
   padding-bottom: 30rem;
   flex: 1;
   max-width: 50%;
-  padding-right: 20px;
+  padding-right: 20rem;
 }
 .text-block .text-l .heading {
   font-family: "Unbounded";
   font-weight: 400;
-  font-size: 48px;
+  font-size: 48rem;
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -309,7 +309,7 @@ header .header-menu span {
 .more-deal .heading {
   font-family: "Unbounded";
   font-weight: 400;
-  font-size: 48px;
+  font-size: 48rem;
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -342,16 +342,16 @@ header .header-menu span {
 .more-deal .more-item .text,
 .more-deal .more-item .link {
   font-family: "JetBrains Mono";
-  font-family: "Cormorant", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 20rem;
   line-height: 130%;
   color: #131313;
 }
 .more-deal .more-item .text,
 .more-deal .more-item .linl {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16rem;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #131313;
@@ -383,7 +383,7 @@ header .header-menu span {
   color: white;
   padding: 0 10rem;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 48rem;
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -474,7 +474,7 @@ header .header-menu span {
   width: fit-content;
 }
 .block .heading {
-  font-family: "Inter", sans-serif;
+  font-family: "Unbounded", sans-serif;
   font-weight: 400;
   font-size: 48rem;
   line-height: 135%;
@@ -610,6 +610,7 @@ footer a.tg {
   font-size: 32rem;
   line-height: 130%;
   margin-top: 200rem;
+  color: #d6e129;
 }
 footer .container {
   display: flex;
@@ -618,6 +619,9 @@ footer .container {
 footer .footer-l {
   display: flex;
   gap: 160rem;
+}
+footer .footer-l .item:first-child li:last-child a {
+  color: #9eff00;
 }
 footer .footer-r .item {
   display: flex;
@@ -721,7 +725,7 @@ footer .bg {
 .keyses-page .hero .container .heading {
   font-family: "Unbounded";
   font-weight: 400;
-  font-size: 48px;
+  font-size: 48rem;
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -734,7 +738,7 @@ footer .bg {
 .blog-heading .heading {
   font-family: "Unbounded";
   font-weight: 400;
-  font-size: 48px;
+  font-size: 48rem;
   line-height: 135%;
   letter-spacing: -0.04em;
   text-transform: uppercase;
@@ -751,12 +755,12 @@ footer .bg {
   width: 100%;
 }
 .blog-heading .categories-wrapper .item {
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 10rem;
+  padding: 10rem;
   background: #f7f7f7;
   font-family: "JetBrains Mono";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16rem;
   line-height: 150%;
   letter-spacing: -0.02em;
   text-align: center;
@@ -766,7 +770,7 @@ footer .bg {
 .blog-text {
   font-family: "Inter Tight";
   font-weight: 400;
-  font-size: 22px;
+  font-size: 22rem;
   line-height: 130%;
   color: #131313;
   margin-bottom: 150rem;
@@ -779,7 +783,14 @@ footer .bg {
   max-width: 100%;
 }
 
+.keyses-page .hero {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .keyses-page .hero {
+    display: block;
+  }
   .desk {
     display: none;
   }
@@ -869,7 +880,7 @@ footer .bg {
     gap: 10rem;
   }
   .block .list .list-item * {
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 150%;
     letter-spacing: -0.02em;
   }
@@ -904,12 +915,12 @@ footer .bg {
     flex-direction: column;
   }
   footer a {
-    font-size: 16px;
+    font-size: 16rem;
   }
   footer a.tg {
     margin-top: 40rem;
     display: block;
-    font-size: 16px;
+    font-size: 16rem;
   }
   footer .logo {
     width: 100%;
@@ -934,17 +945,17 @@ footer .bg {
   }
   .menu .menu-close svg {
     width: 45rem;
-    height: 45px;
+    height: 45rem;
   }
   .text-block .text-l {
     max-width: 100%;
   }
   .text-block .text-l .heading {
-    font-size: 22px;
+    font-size: 22rem;
     line-height: 130%;
   }
   .text-block .text-l .item .item_heading {
-    font-size: 20px;
+    font-size: 20rem;
     line-height: 140%;
   }
   .text-block .text-l .item .item_heading::before {
@@ -1031,7 +1042,7 @@ footer .bg {
   }
   .blog-heading .heading {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 32rem;
     line-height: 130%;
     text-transform: uppercase;
     color: white;
@@ -1039,7 +1050,7 @@ footer .bg {
   .blog-text {
     font-family: "Inter Tight";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 16rem;
     line-height: 130%;
     color: #131313;
     margin-bottom: 150rem;
