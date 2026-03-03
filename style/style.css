@@ -801,6 +801,9 @@ footer .bg {
   color: #131313;
   margin-bottom: 150rem;
 }
+.blog-text img {
+  margin: 10rem 0;
+}
 .blog-text .container {
   padding: 0 300rem;
 }
