@@ -298,6 +298,7 @@ header {
     padding-right: 20rem;
 
     .heading {
+      margin-bottom: 10rem;
       font-family: 'Unbounded';
       font-weight: 400;
       font-size: 48rem;
@@ -315,10 +316,9 @@ header {
         display: flex;
         align-items: center;
         gap: 25rem;
-        font-family: $font-family;
+        font-family: $second-family;
         font-weight: 400;
         font-size: 32rem;
-        letter-spacing: -0.08em;
         color: #0c0c0c;
 
         &::before {
@@ -401,12 +401,16 @@ header {
     .name,
     .text,
     .link {
-      font-family: 'JetBrains Mono';
-      font-family: $second-family;
+      font-family: $font-family;
       font-weight: 500;
       font-size: 20rem;
       line-height: 130%;
       color: #131313;
+    }
+
+    .text,
+    .link {
+      font-size: 16rem;
     }
 
     .text,
@@ -655,6 +659,22 @@ header {
     height: 100%;
     z-index: 1;
     overflow: hidden;
+
+    .video-block {
+      width: 970rem;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      overflow: hidden;
+
+      img {
+        z-index: 2;
+
+        &.disable {
+          display: none;
+        }
+      }
+    }
 
     video,
     img {
@@ -951,7 +971,7 @@ footer {
 }
 
 .blog-text {
-  font-family: 'Inter Tight';
+  font-family: $font-family;
   font-weight: 400;
   font-size: 22rem;
   line-height: 130%;
@@ -964,6 +984,15 @@ footer {
     * {
       margin-bottom: 15rem;
       max-width: 100%;
+
+    }
+
+    h2 {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 32rem;
+      line-height: 130%;
+      color: #131313;
     }
   }
 }
@@ -1246,6 +1275,7 @@ footer {
       .name,
       .text,
       .link {
+
         color: white;
 
       }

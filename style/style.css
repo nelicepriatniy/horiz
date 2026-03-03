@@ -253,6 +253,7 @@ header .header-menu span {
   padding-right: 20rem;
 }
 .text-block .text-l .heading {
+  margin-bottom: 10rem;
   font-family: "Unbounded";
   font-weight: 400;
   font-size: 48rem;
@@ -269,10 +270,9 @@ header .header-menu span {
   display: flex;
   align-items: center;
   gap: 25rem;
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   font-weight: 400;
   font-size: 32rem;
-  letter-spacing: -0.08em;
   color: #0c0c0c;
 }
 .text-block .text-l .item .item_heading::before {
@@ -341,12 +341,15 @@ header .header-menu span {
 .more-deal .more-item .name,
 .more-deal .more-item .text,
 .more-deal .more-item .link {
-  font-family: "JetBrains Mono";
-  font-family: "Inter Tight", sans-serif;
+  font-family: "JetBrains Mono", sans-serif;
   font-weight: 500;
   font-size: 20rem;
   line-height: 130%;
   color: #131313;
+}
+.more-deal .more-item .text,
+.more-deal .more-item .link {
+  font-size: 16rem;
 }
 .more-deal .more-item .text,
 .more-deal .more-item .linl {
@@ -540,6 +543,19 @@ header .header-menu span {
   height: 100%;
   z-index: 1;
   overflow: hidden;
+}
+.block .background .video-block {
+  width: 970rem;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+}
+.block .background .video-block img {
+  z-index: 2;
+}
+.block .background .video-block img.disable {
+  display: none;
 }
 .block .background video,
 .block .background img {
@@ -776,7 +792,7 @@ footer .bg {
 }
 
 .blog-text {
-  font-family: "Inter Tight";
+  font-family: "JetBrains Mono", sans-serif;
   font-weight: 400;
   font-size: 22rem;
   line-height: 130%;
@@ -789,6 +805,13 @@ footer .bg {
 .blog-text .container * {
   margin-bottom: 15rem;
   max-width: 100%;
+}
+.blog-text .container h2 {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 32rem;
+  line-height: 130%;
+  color: #131313;
 }
 
 .keyses-page .hero {
