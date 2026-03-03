@@ -97,11 +97,11 @@ console.log(videoBlock)
 if (videoBlock.length > 0) {
   videoBlock.forEach((el) => {
     el.addEventListener('mouseover', () => {
-      el.querySelector('img').classList.add('disable');
+      el.classList.add('disable');
       el.querySelector('video').play();
     })
     el.addEventListener('mouseout', () => {
-      el.querySelector('img').classList.remove('disable');
+      el.classList.remove('disable');
       el.querySelector('video').pause();
     })
 

@@ -667,12 +667,23 @@ header {
       right: 0;
       overflow: hidden;
 
+      &.disable {
+        video {
+          display: block;
+        }
+
+        img {
+          display: none;
+        }
+      }
+
+      video {
+        display: none;
+      }
+
       img {
         z-index: 2;
 
-        &.disable {
-          display: none;
-        }
       }
     }
 
@@ -893,8 +904,6 @@ footer {
 }
 
 .img-block {
-  margin-bottom: 20rem;
-  margin-top: 20rem;
 
   .mob {
     display: none;
@@ -1418,5 +1427,18 @@ footer {
 
   .block.white .heading {
     text-align: left;
+  }
+
+  .text-block .text-l {
+    padding-top: 25rem;
+    padding-left: 0rem !important;
+  }
+
+  .text-block .text-l .item {
+    margin-top: 25rem;
+  }
+
+  .text-block .text-l .heading {
+    margin-bottom: 0;
   }
 }
